@@ -90,3 +90,28 @@
 - 为什么改：`party_and_camp` 当前最大的风险不是缺材料，而是边界膨胀；先把问题归属、最小关系图和案例准入标准写死，比直接补资料更能保障后续会话稳定接力。
 - 改动影响范围：`.agent/execplan_party_and_camp.md`、`current_state.md`、`next_step.md`
 - 后续注意事项：Milestone 2 只筛与“反馈折返点”直接相关的来源，不要把同伴人物介绍或泛恋爱讨论混进首批来源池。
+
+## 2026-04-23 | 将当前唯一主任务临时切换为“仓库整改”
+- 为什么改：模块 3 明显落后于局部案例模块，集合式来源又被直接上升为正文证据；若继续沿旧主线推进，会放大仓库的上位解释缺口与来源不稳问题。
+- 改动影响范围：`.agent/execplan_repo_rectification.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：这是临时纠偏，不是永久替换项目主路线图；整改结束后仍应回到主路线图定义的模块顺序。
+
+## 2026-04-23 | 先用官方高层来源补强模块 3，并把 BG3-OFF-001 从占位条目压实
+- 为什么改：`00_core_thesis.md` 与 `01_macro_structure.md` 之前直接引用 `BG3-OFF-001`、`BG3-PLY-001` 这类集合式来源，导致总论点与宏观结构无法作为可信入口。
+- 改动影响范围：`docs/03_analysis/00_core_thesis.md`、`docs/03_analysis/01_macro_structure.md`、`docs/00_project/source_index.md`、`docs/02_sources/source_note_bg3_off_001_about_page.md`
+- 后续注意事项：后续若继续处理占位来源，应优先清理仍留在顶层正文与实现验证层中的占位引用，而不是再次扩写局部案例。
+
+## 2026-04-23 | 用具体案例来源替换实现验证层中的集合式玩家占位来源
+- 为什么改：`05_implementation_validation.md` 仍直接列出 `BG3-PLY-001`，会让实现验证层继续把集合式玩家来源当成实际证据入口，削弱整改 `M2` 的目标。
+- 改动影响范围：`docs/03_analysis/05_implementation_validation.md`、`docs/00_project/source_index.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：集合式条目仍可保留在索引中作为来源池入口，但在被拆实前，不应再出现在顶层正文或实现验证层的 Source IDs 中。
+
+## 2026-04-23 | 统一 Grymforge case 的主归属口径，并同步导航层描述
+- 为什么改：仓库已经明确把 Grymforge / Grym 作为 `04_combat_and_environment` 的主案例，仅向 `02_quests_and_choices` 做最小必要回流；若来源工作文件与导航说明仍停留在旧口径，会让后续会话误判模块边界。
+- 改动影响范围：`docs/02_sources/case_note_grymforge_environment_resolution.md`、`README.md`、`docs/00_project/repo_map.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：后续若新增案例工作文件，应在文件内明确主归属模块与次级回流模块，避免再次出现“案例先跑、归属后补”的问题。
+
+## 2026-04-23 | 将整改成果沉入检查脚本，并恢复项目主线到 party_and_camp
+- 为什么改：如果整改只停留在文档层，后续会话仍可能重新引入无效 Source ID、失效 Where used 或状态文件不同步的问题；同时整改完成后需要尽快回到主路线图，而不是让“整改”长期占用主线。
+- 改动影响范围：`scripts/check_repo.py`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`.agent/execplan_repo_rectification.md`
+- 后续注意事项：后续推进营地模块时，应继续依赖检查器约束来源与状态同步，避免再次出现“局部案例先跑、上位解释层滞后”的问题。

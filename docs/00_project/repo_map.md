@@ -1,21 +1,21 @@
-# Repo Map
+﻿# Repo Map
 
 ## 新会话从哪里开始
 
-1. 读 `README.md` 理解仓库目标与工作流
-2. 读 `docs/00_project/current_state.md` 确认当前阶段
-3. 读 `docs/00_project/next_step.md` 获取唯一主任务
-4. 读 `docs/00_project/source_index.md` 了解已有来源与证据分布
-5. 再进入本轮相关模块
+1. 先读 `README.md`，理解仓库目标、边界与基本工作流。
+2. 再读 `docs/00_project/current_state.md`，确认当前阶段与最近变更。
+3. 再读 `docs/00_project/next_step.md`，获取当前唯一主任务。
+4. 再读 `docs/00_project/source_index.md`，确认来源状态与可追溯入口。
+5. 然后进入本轮相关模块、来源笔记或 ExecPlan。
 
 ## 关键文件作用
 
-- `docs/00_project/overview.md`：项目总命题、范围与方法价值
-- `docs/00_project/repo_map.md`：仓库导航
-- `docs/00_project/current_state.md`：单页状态看板
-- `docs/00_project/decision_log.md`：追加式决策历史
-- `docs/00_project/next_step.md`：本轮执行入口
-- `docs/00_project/source_index.md`：来源总索引
+- `docs/00_project/overview.md`：项目总命题、范围与方法价值。
+- `docs/00_project/repo_map.md`：仓库导航。
+- `docs/00_project/current_state.md`：单页状态看板。
+- `docs/00_project/decision_log.md`：追加式决策历史。
+- `docs/00_project/next_step.md`：本轮执行入口。
+- `docs/00_project/source_index.md`：来源总索引与 Source ID 主表。
 
 ## 长期记忆核心
 
@@ -25,20 +25,27 @@
 - `docs/00_project/decision_log.md`
 - `docs/00_project/source_index.md`
 
-这些文件共同承担长期记忆；不要把关键上下文留在对话里。
+这些文件共同承担长期记忆；不要把关键上下文留在聊天记录里。
 
 ## 分析正文
 
-- `docs/03_analysis/00_core_thesis.md`：总论点与待验证命题
-- `docs/03_analysis/01_macro_structure.md`：宏观结构
-- `docs/03_analysis/02_quests_and_choices.md`：任务与选择
-- `docs/03_analysis/03_party_and_camp.md`：同伴与营地循环
-- `docs/03_analysis/04_combat_and_environment.md`：战斗与环境系统
-- `docs/03_analysis/05_implementation_validation.md`：实现验证层汇总
+- `docs/03_analysis/00_core_thesis.md`：总论点与当前最强解释版本。
+- `docs/03_analysis/01_macro_structure.md`：Act / 区域 / 入口 / 推进结构。
+- `docs/03_analysis/02_quests_and_choices.md`：任务、分支、回流与反馈。
+- `docs/03_analysis/03_party_and_camp.md`：同伴、营地、长休与反馈折返点。
+- `docs/03_analysis/04_combat_and_environment.md`：战斗、构筑、环境战术与多解法空间。
+- `docs/03_analysis/05_implementation_validation.md`：公开可验证证据链与实现层判断。
+
+## 来源层
+
+- `docs/02_sources/*.md` 既包括来源类型导航页，也包括来源笔记与案例工作文件。
+- 来源导航页用于说明“该类来源怎么整理”。
+- 来源笔记用于把具体 Source ID 压实成事实、推断、限制与可用位置。
+- 案例工作文件用于在回写正文前保存最小证据链、归属判断与未决问题。
 
 ## 模板和工具
 
-- `templates/source_note.md`：单一来源读书卡
-- `templates/case_note.md`：单一案例拆解卡
-- `scripts/check_repo.py`：结构与内容完整性检查
-- `Makefile`：统一入口
+- `templates/source_note.md`：单个来源读书卡模板。
+- `templates/case_note.md`：单个案例拆解模板。
+- `scripts/check_repo.py`：结构与内容完整性检查。
+- `Makefile`：统一命令入口。
