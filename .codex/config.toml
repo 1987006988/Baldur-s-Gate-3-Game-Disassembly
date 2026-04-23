@@ -1,0 +1,9 @@
+# Trusted repo 后生效的项目级默认值。
+# 目标：保守、安全、可审查，适合长期研究仓库。
+
+model = "gpt-5.2"
+reasoning_effort = "medium"
+personality = "pragmatic"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "cached"

@@ -1,0 +1,93 @@
+# Baldur's Gate 3 Deconstruction Repository
+
+这是一个面向长期维护的《博德之门3》研究仓库：目标不是收集零散笔记，而是持续回答一个核心问题:
+
+> 《博德之门3》如何把桌面规则、电影化叙事和系统性玩家能动性缝合成一个高反应性的 CRPG。
+
+仓库内文档而不是聊天记录，才是本项目的长期记忆主载体。未来任何一次 Codex 会话都应优先读取仓库文件来恢复上下文。
+
+## 项目目标
+
+- 用三层拆解方法解释 BG3 为什么让玩家感到自由、沉浸、被反馈。
+- 把体验层观察、规则系统分析和实现验证证据串成可追溯研究链。
+- 为后续持续扩展模块、补充来源、修正结论保留清晰的状态和决策历史。
+
+## 非目标
+
+- 不做按剧情顺序的完整复述。
+- 不做全量 wiki 式资料搬运。
+- 不把未经证实的社区印象直接写成事实。
+- 不依赖外部数据库、Notion、向量库或私有服务。
+
+## 三层拆解方法
+
+1. 玩家体验层：玩家在何处感到自由、沉浸、被系统回应，具体看到了什么反馈。
+2. 规则系统层：任务、选择、成长、战斗、探索、资源循环如何耦合并产生前述体验。
+3. 实现验证层：尽量用官方公开资料、开发者说明、可观察 UI、术语、数据组织和工具链线索，验证这些体验为何成立。
+
+这三层互相校正：体验层防止研究失去玩家视角，系统层防止只剩感受描述，实现层防止分析变成纯猜测。
+
+## 仓库目录
+
+- `AGENTS.md`：全局协作规则，只写协作约束，不承载项目知识。
+- `.agent/PLANS.md`：ExecPlan 使用规范，适合大型研究任务。
+- `.agents/skills/bg3-research/SKILL.md`：高频研究动作的固定流程。
+- `.codex/config.toml`：项目级保守默认配置。
+- `docs/00_project/`：项目入口、状态、决策、下一步、来源总索引。
+- `docs/01_methodology/`：三层拆解方法、证据规则、模块模板。
+- `docs/02_sources/`：来源类型导航页，用于整理官方资料、社区拆解、可借鉴项目。
+- `docs/03_analysis/`：核心分析正文。
+- `templates/`：来源笔记和案例拆解模板。
+- `scripts/check_repo.py`：轻量仓库检查。
+- `Makefile`：最小命令入口。
+
+## 推荐工作流
+
+新会话进入仓库后，建议按这个顺序阅读:
+
+1. `README.md`
+2. `docs/00_project/current_state.md`
+3. `docs/00_project/next_step.md`
+4. `docs/00_project/source_index.md`
+5. `docs/00_project/repo_map.md`
+6. 本轮相关的分析模块与来源导航页
+
+如果任务较复杂或跨度较大，先建立或更新 ExecPlan，再动正文。
+
+## 如何新增资料
+
+1. 先确认来源类型和优先级。
+2. 在 `docs/00_project/source_index.md` 登记新的 Source ID。
+3. 按 `templates/source_note.md` 生成来源笔记或等价结构化摘录。
+4. 把提炼出的事实、推断、待验证问题写入对应分析模块。
+5. 同步更新 `current_state.md` 与 `next_step.md`。
+
+## 如何新增模块
+
+1. 先检查 `docs/03_analysis/` 是否已有相近模块。
+2. 如果是大型模块，先在 ExecPlan 中定义目标、证据、里程碑。
+3. 依据 `docs/01_methodology/module_template.md` 起草。
+4. 每个结论都要能映射到 `source_index.md` 中的来源 ID。
+5. 若结论改变既有判断，追加写入 `decision_log.md`。
+
+## 如何更新状态
+
+- 做完任何有意义的研究动作后，至少同步:
+  - `docs/00_project/current_state.md`
+  - `docs/00_project/next_step.md`
+- 如果引入新来源，更新 `docs/00_project/source_index.md`
+- 如果改了方法、结论或结构，更新 `docs/00_project/decision_log.md`
+
+## 最小命令
+
+```bash
+make check
+```
+
+如果本机没有 `make`，可直接运行:
+
+```bash
+python scripts/check_repo.py
+```
+
+`check` 只做轻量验证：关键文件是否存在、是否为空，以及分析文档是否至少保留来源或待验证痕迹。
