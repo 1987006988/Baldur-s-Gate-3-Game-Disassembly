@@ -142,3 +142,9 @@
 - 为什么改：当前证据强度不支持把营地模块直接写成同伴剧情总整理；先用 1 条较闭合的强案例、1 条边界暴露型候补案例和 1 组系统型补丁锚点，更能保持论证收束。
 - 改动影响范围：`docs/03_analysis/03_party_and_camp.md`、`.agent/execplan_party_and_camp.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
 - 后续注意事项：若后续直接扩写正文，应优先补“第三类营地反馈案例”或继续控制 `Dark Urge` 与 `Minthara` 的论证权重，避免高辨识度特例吞掉模块解释力。
+
+## 2026-04-23 | 完成营地模块的小范围证据补强后，停止继续做同类低收益迭代
+
+- 为什么改：本轮已经用 `BG3-OFF-002` 补强了 `Dark Urge bard` 的官方 framing，并用 `BG3-OFF-010` 补出非 `Minthara` 的营地 reaction / 对话可达性平行锚点；继续围绕零散补丁 / 热修做同类侦察，收益开始明显下降。
+- 改动影响范围：`docs/03_analysis/03_party_and_camp.md`、`docs/02_sources/source_note_bg3_off_002_patch_7.md`、`docs/02_sources/source_note_bg3_off_010_hotfix_3_camp_reactivity.md`、`.agent/execplan_party_and_camp.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：`party_and_camp` 后续只在出现更强官方来源时再做定点回补；`Halsin` 候选继续只留在 open questions，不升级为正文主案例。
