@@ -115,3 +115,8 @@
 - 为什么改：如果整改只停留在文档层，后续会话仍可能重新引入无效 Source ID、失效 Where used 或状态文件不同步的问题；同时整改完成后需要尽快回到主路线图，而不是让“整改”长期占用主线。
 - 改动影响范围：`scripts/check_repo.py`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`.agent/execplan_repo_rectification.md`
 - 后续注意事项：后续推进营地模块时，应继续依赖检查器约束来源与状态同步，避免再次出现“局部案例先跑、上位解释层滞后”的问题。
+
+## 2026-04-23 | 重写 README 以修复 GitHub 上的中文乱码
+- 为什么改：根目录 README 是新会话和 GitHub 审阅的总入口；若正文编码异常，会直接破坏仓库的可读性与上下文恢复能力。
+- 改动影响范围：`README.md`
+- 后续注意事项：后续若再重写仓库入口文件，需继续以 UTF-8 保存，并在推送前优先检查 GitHub 预览效果。
