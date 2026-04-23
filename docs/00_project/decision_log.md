@@ -126,17 +126,17 @@
 - 改动影响范围：`.agent/execplan_party_and_camp.md`、`docs/00_project/source_index.md`、`docs/03_analysis/03_party_and_camp.md`、`docs/03_analysis/05_implementation_validation.md`
 - 后续注意事项：社区来源继续只作为案例线索使用；下一步进入 `Milestone 3` 时，应优先围绕已确认的官方锚点组织案例骨架，而不是先扩充更多来源池。
 
-## 2026-04-23 | ???????????1 ??? + 1 ???????
-
-- ??????????????????????????????????????? `Dark Urge ?? bard ??` ?????`Minthara ?????` ????????????????
-- ???????`.agent/execplan_party_and_camp.md`?`docs/02_sources/case_note_dark_urge_bard_event.md`?`docs/02_sources/case_note_minthara_camp_reaction_chain.md`?`docs/00_project/current_state.md`?`docs/00_project/next_step.md`
-- ??????????????? `Minthara` ??????????????????????????????
-
 ## 2026-04-23 | 营地模块首批案例采用“1 强案例 + 1 候补案例”结构
 
 - 为什么改：当前来源强度不支持同时把多个营地案例都写成同等强度的正文论据；先锁定 `Dark Urge 营地 bard 事件` 为强案例、`Minthara 营地反应链` 为候补案例，更利于控制论证权重。
 - 改动影响范围：`.agent/execplan_party_and_camp.md`、`docs/02_sources/case_note_dark_urge_bard_event.md`、`docs/02_sources/case_note_minthara_camp_reaction_chain.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
 - 后续注意事项：正文回写时不要把 `Minthara` 个案直接扩写成普遍规律，应优先把它当作营地反馈边界的暴露点。
+
+## 2026-04-23 | 第三类营地反馈案例只做一次受控侦察，并据此收束正文策略
+
+- 为什么改：营地模块在 `Milestone 4` 后出现了“直接扩写正文”与“继续补第三案例”之间的分叉；如果不先给第三案例设定准入标准，后续很容易重新滑回无上限补资料。
+- 改动影响范围：`.agent/execplan_party_and_camp.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/source_index.md`、`docs/02_sources/source_note_bg3_off_009_hotfix_29_halsin_camp.md`、`docs/02_sources/case_note_halsin_rescue_camp_feedback.md`
+- 后续注意事项：本轮已找到 `救出 Halsin 后的营地同伴对话恢复` 这一第三案例候选，但它不足以进入首轮正文；下一步应直接按现有“强案例 + 候补案例 + 系统型补丁锚点”结构扩写 `03_party_and_camp.md`。
 ## 2026-04-23 | 营地模块首轮正文采用“强案例 + 候补案例 + 系统型补丁锚点”结构
 
 - 为什么改：当前证据强度不支持把营地模块直接写成同伴剧情总整理；先用 1 条较闭合的强案例、1 条边界暴露型候补案例和 1 组系统型补丁锚点，更能保持论证收束。
