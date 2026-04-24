@@ -1,4 +1,4 @@
-# Decision Log
+﻿# Decision Log
 
 ## 2026-04-22 | 采用三层拆解作为仓库主方法
 
@@ -148,3 +148,21 @@
 - 为什么改：本轮已经用 `BG3-OFF-002` 补强了 `Dark Urge bard` 的官方 framing，并用 `BG3-OFF-010` 补出非 `Minthara` 的营地 reaction / 对话可达性平行锚点；继续围绕零散补丁 / 热修做同类侦察，收益开始明显下降。
 - 改动影响范围：`docs/03_analysis/03_party_and_camp.md`、`docs/02_sources/source_note_bg3_off_002_patch_7.md`、`docs/02_sources/source_note_bg3_off_010_hotfix_3_camp_reactivity.md`、`.agent/execplan_party_and_camp.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
 - 后续注意事项：`party_and_camp` 后续只在出现更强官方来源时再做定点回补；`Halsin` 候选继续只留在 open questions，不升级为正文主案例。
+
+## 2026-04-23 | 将项目总逻辑从“模块研究顺序”重排为“展示顺序 + 区域包执行顺序”双轨结构
+
+- 为什么改：仓库原有研究底座已经足够稳，但项目级入口没有把“研究推进顺序”和“展示给人看的顺序”分开写清，导致局部模块推进时容易给人“为什么突然拆营地”的观感。
+- 改动影响范围：`README.md`、`docs/00_project/overview.md`、`docs/00_project/repo_map.md`、`docs/00_project/master_roadmap.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/deconstruction_display_overview.md`、`docs/00_project/deconstruction_master_execution_plan.md`、`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/source_index.md`、`docs/02_sources/benchmark_projects.md`、`docs/02_sources/bg3_official.md`
+- 后续注意事项：后续执行必须按区域包 / Act 包推进，再把结论沉入分析模块；展示时必须按“宏观结构 → 局部行动 → 任务回流 → 营地折叠 → Act 收束 → 实现验证”的链条组织，不要再把营地作为独立平行模块突然推出。
+
+## 2026-04-24 | 将外部交付中的总逻辑成果受控合并回主仓库
+
+- 为什么改：`D:\download` 中已有一套更清晰的项目级总览、阶段计划和超细颗粒度执行脚本；直接吸收这些项目级成果，能在不重写既有研究正文的前提下，解决仓库入口、展示顺序和执行单元不一致的问题。
+- 改动影响范围：`README.md`、`docs/00_project/deconstruction_display_overview.md`、`docs/00_project/deconstruction_master_execution_plan.md`、`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/master_roadmap.md`、`docs/00_project/repo_map.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/decision_log.md`、`docs/00_project/source_index.md`、`docs/02_sources/benchmark_projects.md`、`docs/02_sources/bg3_official.md`、`docs/02_sources/source_note_bmk_002_reverse_design_ff6.md`、`docs/02_sources/source_note_bmk_003_boss_keys.md`、`docs/02_sources/source_note_bg3_off_011_osiris_intro.md`、`docs/02_sources/source_note_bg3_off_012_journal_editor_overview.md`、`docs/02_sources/source_note_bg3_off_013_journal_structure_overview.md`、`docs/02_sources/source_note_bg3_off_014_add_quest_to_situation.md`
+- 后续注意事项：继续以主仓库现有 `docs/03_analysis/*` 正文和案例积累为主，不要把区域包执行法误写成剧情目录；下一步直接执行 `Nautiloid 区域包`，不要回跳到营地模块做低收益补丁侦察。
+
+## 2026-04-24 | 将 `Nautiloid` 固定为第一块模板区域包
+
+- 为什么改：项目级文件虽然已经把执行单元改成“区域包 / Act 包”，但如果第一块区域包不真正跑通，仓库仍会停留在口号层。`Nautiloid` 体量最可控，也最能同时暴露多入口、早期战斗、队友收编、正式目标与状态清理。
+- 改动影响范围：`.agent/execplan_nautiloid_region_pack.md`、`docs/02_sources/source_note_bg3_off_015_patch_6_nautiloid_tutorial.md`、`docs/02_sources/case_note_nautiloid_opening_state_and_multi_entry.md`、`docs/02_sources/source_note_bg3_off_002_patch_7.md`、`docs/03_analysis/00_core_thesis.md`、`docs/03_analysis/01_macro_structure.md`、`docs/03_analysis/02_quests_and_choices.md`、`docs/03_analysis/04_combat_and_environment.md`、`docs/03_analysis/05_implementation_validation.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/source_index.md`
+- 后续注意事项：`Nautiloid` 只证明“起点就有区域包逻辑”，不提前外推所有开场分歧都会长线回流；下一步应直接进入 `Act 1 地表主区`，继续按同样模板推进。
