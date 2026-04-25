@@ -1,5 +1,9 @@
 # ExecPlan Addendum: Stage-6 Release Package Assembly Review Round 31
 
+## Later Status
+
+This file is now a historical maintenance record. After the Stage-6 flow correction on 2026-04-26, it no longer acts as any live continuation entry; use it only for archive context.
+
 ## Goal
 
 Provide the latest continuation note for the 31st controlled consistency review in Stage 6. This round confirms:

@@ -7,7 +7,7 @@
 3. 再读 `docs/00_project/deconstruction_master_execution_plan.md`，理解阶段划分、依赖关系与完成标准。
 4. 再读 `docs/00_project/deconstruction_granular_codex_plan.md`，确认每个区域包 / 跨阶段系统的实际执行脚本。
 5. 再读 `docs/00_project/current_state.md`，确认当前阶段与最近变更。
-6. 再读 `docs/00_project/next_step.md`，获取当前唯一主任务。
+6. 再读 `docs/00_project/next_step.md`，获取当前默认状态与是否真的需要重开维护 round。
 7. 再读 `docs/00_project/source_index.md`，确认来源状态与可追溯入口。
 8. 然后进入本轮相关模块、来源笔记或 ExecPlan。
 
@@ -156,15 +156,19 @@
 ## 阶段 6 当前总装配 / 审阅层在哪里
 
 - `.agent/execplan_stage6_release_package_assembly_review.md`
-  负责记录第九个子单元为什么存在、完成标准是什么，以及为什么这一步不能借审阅之名回跳阶段 5；它现在保留为总装配层的基准说明，而不是续轮唯一入口。
-- `.agent/execplan_stage6_release_package_assembly_review_round31.md`
-  负责记录第三十一轮受控一致性审阅后的最新续轮覆盖说明；当前继续推进阶段 6 时，默认以这份 addendum 承接 review-level 口径。
+  负责记录第九个子单元为什么存在、完成标准是什么，以及为什么这一步不能借审阅之名回跳阶段 5；它现在保留为总装配层的基准说明，而不是当前主动主线。
+- `.agent/execplan_stage6_release_package_assembly_review_round1.md` 到 `.agent/execplan_stage6_release_package_assembly_review_round31.md`
+  负责保留历史维护记录；它们现在属于维护记录 / 归档链，不再承担当前默认推进主干。
+- `.agent/execplan_stage6_release_package_assembly_review_round32.md`
+  负责记录截至 2026-04-26 的最近一次维护确认；它的定位是“最新维护记录”，不是“当前默认下一轮主任务”。
 - `docs/00_project/stage6_release_package_assembly_review_sheet.md`
-  现在是阶段 6 总装配 / 审阅层的承载文件：五段 actual units 的 `assembly map`、`review checklist` 与 `writeback trigger` 都以这里为准。
+  现在是阶段 6 总装配 / 审阅层的承载文件：五段 actual units 的 `assembly map`、`review checklist`、`writeback trigger` 与维护态规则都以这里为准。
+- `docs/01_methodology/stage6_freeze_maintenance_playbook.md`
+  现在是阶段 6 冻结维护态的操作清单：默认阅读顺序、四步 maintenance pass、允许写回范围与禁止动作都以这里为准。
 - `docs/03_analysis/05_implementation_validation.md`
   负责给 assembly / review 层提供 release anchor 与 evidence lock，判断哪些冲突真的值得回写，哪些应保持当前边界。
 
-如果下一次会话继续推进阶段 6，不应再新增第六段 actual units，也不应回头重写 queue；应继续按 `review sheet + 最新 addendum` 执行受控一致性审阅。当前三十一轮审阅里，除首轮的 `FINAL-ASSET-001` 独立 `入口页` 行问题与第十轮补回 `BMK-002 / BMK-003` benchmark traceback 外，未再打开新的 actual-unit 级硬阻塞；2026-04-26 的第三十一轮也已继续确认该修复保持有效，并把续轮入口统一推进到 `round31`。若没有新的 trigger，就只更新审阅结论与状态同步。
+如果下一次会话涉及阶段 6，不应默认新增 `round33`，也不应回头重写 queue。当前三十二轮审阅里，除首轮的 `FINAL-ASSET-001` 独立 `入口页` 行问题与第十轮补回 `BMK-002 / BMK-003` benchmark traceback 外，未再打开新的 actual-unit 级硬阻塞；因此阶段 6 现已进入冻结后的条件触发维护态。正确默认动作是先按 `docs/01_methodology/stage6_freeze_maintenance_playbook.md` 做 trigger 判定与 maintenance pass；只有出现五段 actual units 正文改动、handoff 顺序变化、evidence lock / benchmark traceback 回退、assembly map 改动，或项目负责人明确要求复核发布链时，才重开 `review sheet + round32` 这组维护入口。
 
 ## 分析正文
 

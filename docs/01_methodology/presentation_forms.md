@@ -183,7 +183,7 @@
   - 已有一份 `review checklist`，明确顺序、handoff、证据强度与 traceback 该怎么统一审阅
   - 已有一份 `writeback trigger`，明确什么情况下才允许回写单段承载文件
 
-完成第九子单元后，下一唯一主任务不应回到 queue 或阶段 5；应执行这份 review sheet 的受控一致性审阅。当前首轮审阅已完成并修正 `FINAL-ASSET-001` 的独立 `入口页` 行；后续若没有新的 trigger，就只更新审阅结论与状态同步，不再扩写单段文件。
+完成第九子单元后，下一唯一主任务不应回到 queue 或阶段 5；应执行这份 review sheet 的受控一致性审阅。当前首轮审阅已完成并修正 `FINAL-ASSET-001` 的独立 `入口页` 行；后续若没有新的 trigger，就先按 `docs/01_methodology/stage6_freeze_maintenance_playbook.md` 做 no-trigger 判定，再只更新审阅结论与状态同步，不再扩写单段文件。
 
 ### 第九子单元的特别约束
 

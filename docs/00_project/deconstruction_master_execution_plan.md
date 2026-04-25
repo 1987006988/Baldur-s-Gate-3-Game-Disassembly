@@ -404,11 +404,14 @@
 - 读者不会再问“为什么突然拆营地”。
 - Codex 可以沿粒度计划继续补下一块，不需要再问总逻辑。
 - 五段 actual units 已能被一份 assembly / review sheet 统一装配与审阅，而不必回头重写 queue。
+- 首批发布包闭合后，阶段 6 能明确切入“冻结后的条件触发维护态”，而不是默认无限继续 addendum 续轮。
+- 冻结维护态现在还有独立 playbook，因此后续会话即使进入 stage 6，也应先做 trigger 判定，而不是默认把维护理解成新一轮审阅。
 
 ### 对应文件
 
 - `docs/00_project/deconstruction_display_overview.md`
 - `docs/01_methodology/presentation_forms.md`
+- `docs/01_methodology/stage6_freeze_maintenance_playbook.md`
 - `docs/00_project/stage6_release_package_assembly_review_sheet.md`
 - `README.md`
 - `repo_map.md`
@@ -432,11 +435,17 @@
 - 阶段 3：Act 2 首轮闭合
 - 阶段 4：Act 3 首轮闭合
 - 阶段 5：横向综合与实现验证升级已闭合
-- 阶段 6：展示入口、section skeleton、最低发布包、五段 actual units 与首轮 assembly / review 清单均已落地
+- 阶段 6：展示入口、section skeleton、最低发布包、五段 actual units、首轮 assembly / review 清单、截至 2026-04-26 的 `round32` 维护确认，以及冻结维护态 playbook 都已落地；当前维护入口也已进一步收口为 review sheet + playbook 这一组默认判定工具
 
-当前唯一主任务是：
+当前默认阶段定位是：
 
-> 继续执行阶段 6 的受控发布包一致性审阅；首轮局部 trigger 已修正，后续仅当 `stage6_release_package_assembly_review_sheet.md` 再次命中 writeback trigger 时，才回写对应单段承载文件，否则只更新审阅结论与状态同步。
+> 阶段 6 已闭合，仓库进入“冻结后的条件触发维护态”。`stage6_release_package_assembly_review_sheet.md` 是默认主动维护入口，`docs/01_methodology/stage6_freeze_maintenance_playbook.md` 是默认维护动作清单，历史 round addendum 只保留为维护记录链；只有命中新 trigger、出现正文级改动 / handoff 变化 / evidence traceback 回退 / assembly map 改动，或项目负责人明确要求复核发布链时，才重开新的 review round。
+
+以下情况不应再单独推动新 round：
+
+- 只是为了“再谨慎检查一轮”
+- 没有新的正文改动，也没有新的 trigger
+- 只是想把 latest addendum 文件名继续递增
 
 ## 5. 什么情况下必须暂停并重审整份计划
 

@@ -1,5 +1,35 @@
 ﻿# Decision Log
 
+## 2026-04-26 | 将阶段 6 的默认维护动作压成独立 playbook，而不是继续散落在 review sheet / 状态页 / 实现验证页
+
+- 为什么改：高优先级计划已经明确阶段 6 已闭合，默认动作也不再是继续开新 round；但仓库里还缺一份把“先读什么、如何判定 trigger、未命中时允许改哪些文件”压成单页操作清单的文件。这样会让后续会话虽然知道“不该开 `round33`”，却仍可能在 `review sheet`、`05_implementation_validation.md` 与状态页之间来回找规则，甚至重新误判为需要开新 round。
+- 改动影响范围：`.agent/execplan_stage6_freeze_maintenance_playbook.md`、`docs/01_methodology/stage6_freeze_maintenance_playbook.md`、`docs/00_project/stage6_release_package_assembly_review_sheet.md`、`docs/03_analysis/05_implementation_validation.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/repo_map.md`
+- 后续注意事项：后续若再碰到 stage-6 维护，先按 playbook 执行四步 maintenance pass；若未命中新 trigger，只允许维护 review-layer / 状态入口，不允许回写五段 actual units，也不允许为“再谨慎检查一轮”而新开 `round33`。
+
+## 2026-04-26 | 将高优先级总计划同步到 stage 6 终态口径，并明确当前不存在新的默认主任务
+
+- 为什么改：虽然 `current_state.md`、`next_step.md`、`review sheet` 与 `05_implementation_validation.md` 已经完成 freeze-maintenance 收口，但三份高优先级计划和少数方法/路线图文件仍只写到“review sheet 已闭合”，没有把 playbook 也纳入默认维护动作。这样会留下一个微妙分叉：局部状态页知道 stage 6 已结束，顶层计划文件却还没有把“先按 playbook 判定 trigger”写成默认动作。
+- 改动影响范围：`docs/00_project/deconstruction_display_overview.md`、`docs/00_project/deconstruction_master_execution_plan.md`、`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/master_roadmap.md`、`docs/01_methodology/presentation_forms.md`、`docs/03_analysis/05_implementation_validation.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：从现在起，仓库的顶层计划、方法、状态与验证入口都应一致视为“阶段 0-6 主任务已结束，stage 6 默认只剩 trigger-gated maintenance”；若未命中新 trigger，就不应再生成新的默认执行子单元。
+
+## 2026-04-26 | 将阶段 6 的“当前主任务”口径正式改写为“冻结维护态待命”，并压缩 round11-32 的逐轮维护叙述
+
+- 为什么改：虽然冻结维护态稳定化已经完成，但 `deconstruction_granular_codex_plan.md` 仍把它写成“当前立刻执行”的子单元，`current_state.md` 与 `05_implementation_validation.md` 也仍保留大量“把 latest addendum 再推进一轮”的逐条流水。这样会继续把已完成的稳定化动作误读成进行中的主线。
+- 改动影响范围：`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/03_analysis/05_implementation_validation.md`、`.agent/execplan_stage6_freeze_maintenance_stabilization.md`
+- 后续注意事项：高优先级计划文件现在不再声明新的默认 stage-6 执行子单元；若未命中新 trigger，只维持冻结维护规则与状态同步。round11-32 的详细逐轮漂移记录继续留在 `review sheet` 与 `round*.md` 维护链，而不是状态页或实现验证进度页。
+
+## 2026-04-26 | 将阶段 6 的默认维护入口进一步收口为“review sheet 本身”，而不是“latest addendum 指针”
+
+- 为什么改：阶段 6 虽然已经在上一轮被切到“冻结后的条件触发维护态”，但 `stage6_release_package_assembly_review_sheet.md`、`05_implementation_validation.md`、`current_state.md` 等文件里仍保留大量“把最新 round 文件名继续往前推一轮”的维护叙述。这样会让后续会话即使没有新 trigger，也仍被入口口径牵引回 `round33` 式自续轮。
+- 改动影响范围：`.agent/execplan_stage6_freeze_maintenance_stabilization.md`、`docs/00_project/stage6_release_package_assembly_review_sheet.md`、`docs/03_analysis/05_implementation_validation.md`、`docs/00_project/deconstruction_display_overview.md`、`docs/00_project/deconstruction_master_execution_plan.md`、`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`
+- 后续注意事项：默认只读 `stage6_release_package_assembly_review_sheet.md` 维护规则；只有确实命中新 trigger 时，才再读取最近一次维护记录并决定是否新开 round。`round32` 只是截至 2026-04-26 的最近一次维护快照，不再承担主动执行指针。
+
+## 2026-04-26 | 将阶段 6 从主动续轮态切换为“冻结后的条件触发维护态”
+
+- 为什么改：仓库内容主线没有跑偏，但项目级导航文件、状态文件与 stage 6 review-level 文件之间开始形成新的流程冲突：`master_roadmap.md` 仍停在阶段 5 / `Nautiloid` 主线，而 `current_state.md`、`next_step.md` 与多份 stage 6 文件则把“继续下一轮 addendum”写成默认唯一主任务。如果不纠偏，仓库会在没有新 trigger 的前提下把 review-loop 自我维持成主线。
+- 改动影响范围：`docs/00_project/master_roadmap.md`、`docs/00_project/current_state.md`、`docs/00_project/next_step.md`、`docs/00_project/deconstruction_master_execution_plan.md`、`docs/00_project/deconstruction_display_overview.md`、`docs/00_project/deconstruction_granular_codex_plan.md`、`docs/00_project/repo_map.md`、`docs/00_project/stage6_release_package_assembly_review_sheet.md`、`docs/03_analysis/05_implementation_validation.md`、`.agent/execplan_stage6_release_package_assembly_review_round31.md`、`.agent/execplan_stage6_release_package_assembly_review_round32.md`
+- 后续注意事项：阶段 6 现在算已闭合；默认不再新增 `round33`。`review sheet` 与 latest addendum 只保留为条件触发维护入口，只有在五段 actual units 正文改动、handoff 顺序变化、evidence lock / benchmark traceback 回退、assembly map 改动，或项目负责人明确要求时，才重开新的 review round。
+
 ## 2026-04-25 | 将阶段 6 的第九个子单元固定为“first release package assembly / review sheet”
 
 - 为什么改：五段 actual units 虽然已经闭合，但仓库仍缺一层统一的 assembly / review，无法稳定回答“这五段如何装成同一条发布链、先审什么、什么情况下才值得回写单段文件”。如果没有这一步，后续会话很容易借审阅之名回头重写 queue、误升 supporting bundle，或把 modding / Journal 文档越级写成 shipped content 实锤。
