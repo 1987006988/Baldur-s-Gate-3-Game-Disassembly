@@ -391,6 +391,7 @@
 
 - 清晰的阅读 / 展示顺序
 - 需要时补图、卡片、流程图、结构图的说明稿
+- 一份首轮发布包总装配 / 审阅清单
 - 更新后的 `deconstruction_display_overview.md`
 
 ### 依赖关系
@@ -402,11 +403,13 @@
 - 仓库负责人一眼就能看懂项目按什么逻辑拆。
 - 读者不会再问“为什么突然拆营地”。
 - Codex 可以沿粒度计划继续补下一块，不需要再问总逻辑。
+- 五段 actual units 已能被一份 assembly / review sheet 统一装配与审阅，而不必回头重写 queue。
 
 ### 对应文件
 
 - `docs/00_project/deconstruction_display_overview.md`
 - `docs/01_methodology/presentation_forms.md`
+- `docs/00_project/stage6_release_package_assembly_review_sheet.md`
 - `README.md`
 - `repo_map.md`
 
@@ -425,10 +428,15 @@
 
 - 阶段 0：总逻辑重审与导航重排
 - 阶段 1：执行底座冻结的首轮搭桥（benchmark + Journal / Osiris 来源已经入索引）
+- 阶段 2：Act 1 六个区域包首轮闭合
+- 阶段 3：Act 2 首轮闭合
+- 阶段 4：Act 3 首轮闭合
+- 阶段 5：横向综合与实现验证升级已闭合
+- 阶段 6：展示入口、section skeleton、最低发布包、五段 actual units 与首轮 assembly / review 清单均已落地
 
 当前唯一主任务是：
 
-> 启动阶段 2 的第一个区域包：`Nautiloid`。
+> 继续执行阶段 6 的受控发布包一致性审阅；首轮局部 trigger 已修正，后续仅当 `stage6_release_package_assembly_review_sheet.md` 再次命中 writeback trigger 时，才回写对应单段承载文件，否则只更新审阅结论与状态同步。
 
 ## 5. 什么情况下必须暂停并重审整份计划
 

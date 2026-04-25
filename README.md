@@ -59,6 +59,30 @@
 
 研究顺序和展示顺序不同，是因为 BG3 的证据天然分散在区域、案例和后续反馈里；先按区域包收证据，才能稳定地写出展示链条。
 
+## 当前展示入口（阶段 6）
+
+阶段 5 已经把三条横向主干统一压成“`1` 条正式 spine + `1` 次 ceiling / supporting-bundle / handoff 收口”的同一种出口结构，因此当前对外入口不该再把 `Quest`、`Combat`、`Camp` 当成三份并列工程，而应把它们放回同一条反应性链条。
+
+如果只想先按当前最稳的展示顺序读，建议按这个顺序进入：
+
+1. `README.md`
+2. `docs/00_project/deconstruction_display_overview.md`
+3. `docs/03_analysis/00_core_thesis.md`
+4. `docs/03_analysis/01_macro_structure.md`
+5. `docs/03_analysis/04_combat_and_environment.md`
+6. `docs/03_analysis/02_quests_and_choices.md`
+7. `docs/03_analysis/03_party_and_camp.md`
+8. `docs/03_analysis/05_implementation_validation.md`
+
+这条顺序的含义是：
+
+- 先用总论点与宏观结构回答“BG3 到底在解释什么、问题从哪里展开”。
+- 再用战斗 / 环境回答“玩家最早在哪一层感到自己能这样试”。
+- 然后才进入任务回流与营地折叠，解释“系统后来如何记住并读回这些尝试”。
+- 最后用实现验证层说明哪些判断已经够稳，哪些仍只是当前最强解释。
+
+`Act 收束与终局压力` 当前不作为单独入口文件，而是以 `01_macro_structure.md` 为骨架，与 `02_quests_and_choices.md`、`03_party_and_camp.md` 联读。
+
 ## 为什么不能按剧情复述
 
 BG3 的优势不是“剧情很多”，而是“行动方式、状态记录、延迟反馈和后续承接”之间形成了链条。按剧情复述写，容易出现三种问题：

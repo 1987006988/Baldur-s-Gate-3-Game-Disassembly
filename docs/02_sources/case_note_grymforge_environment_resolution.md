@@ -20,6 +20,12 @@ Grymforge / Grym 环境解法路径
 - 它和 `04_combat_and_environment` 天然同构，更适合作为战斗模块主案例，而不是直接塞进任务模块当主论据。
 - 它仍然能反向支撑 `02_quests_and_choices`：说明 BG3 的选择系统并不只靠叙事分支成立。
 
+## 本轮区域包收束口径
+
+- 这份 note 当前应承担的不是“单个 Boss 战打法对照”，而是 `Underdark` 下游第一块高密度 `encounter bundle` 的区域包结论。
+- 稳定可写的重点是：`Grymforge` 如何把区域推进、环境利用、复杂遭遇与任务语境压到同一块，而不是罗列全部机关或 cheese。
+- 向 `02_quests_and_choices.md` 的回流应只停在高层边界：战斗 / 环境解法本身也是选择系统的一部分。
+
 ## 当前可确认的案例方向
 
 - 以 `Grymforge / Grym` 为中心，观察玩家如何通过高差、落体、机关、远程击打拉杆、非常规站位与战前准备来重写战斗解决方式。
@@ -48,3 +54,13 @@ Grymforge / Grym 环境解法路径
 
 - 当前已确认的仓库口径是：这条案例首先属于 `04_combat_and_environment`，其次才在 `02_quests_and_choices` 中承担最小必要的高层回流作用。
 - 因此它不再被视为“任务模块待补主案例”，而是“战斗模块主案例，可回流支撑任务模块”的桥接案例。
+
+## 区域包结论
+
+- `推断`：`Grymforge` 现在已经可以被写成 `Act 1` 第一块早期 `encounter bundle / combat-agency compression pack`，因为公开来源已同时暴露 `Underdark -> Grymforge` 的下游 setup、区域级 `choices + complex combat encounters` 框架，以及玩家如何把这类遭遇理解成环境重写问题。基于 `BG3-OFF-003`, `BG3-OFF-006`, `BG3-PLY-004`
+- `推断`：对仓库主链来说，这块最重要的价值不是证明某条著名打法永远稳定，而是证明 BG3 会把“我怎么处理这场复杂遭遇”本身做成区域推进体验的一部分。基于 `BG3-OFF-003`, `BG3-OFF-006`
+- `待验证问题`：现阶段仍不宜把具体熔炉机关、落体或远程拉杆路径直接升级成 objective / step 事实链；更细的路径判断仍应留在后续战斗模块与实现验证层继续压实。
+
+## Revision notes
+
+- 2026-04-24：将本 note 从“战斗补强方向”收束为 `Grymforge` 首轮区域包的工作底稿，明确主结论、回流边界与待验证范围。

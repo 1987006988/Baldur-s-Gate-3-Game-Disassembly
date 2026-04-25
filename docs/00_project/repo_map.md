@@ -36,6 +36,136 @@
 
 这些文件共同承担长期记忆；不要把关键上下文留在聊天记录里。
 
+## 只想按当前展示入口阅读
+
+如果目标不是推进执行，而是先看懂仓库当前最稳的对外结构，按这个顺序读：
+
+1. `README.md`
+2. `docs/00_project/deconstruction_display_overview.md`
+3. `docs/03_analysis/00_core_thesis.md`
+4. `docs/03_analysis/01_macro_structure.md`
+5. `docs/03_analysis/04_combat_and_environment.md`
+6. `docs/03_analysis/02_quests_and_choices.md`
+7. `docs/03_analysis/03_party_and_camp.md`
+8. `docs/03_analysis/05_implementation_validation.md`
+
+`Act 收束与终局压力` 当前不作为单独入口文件，而是通过 `01_macro_structure.md`、`02_quests_and_choices.md` 与 `03_party_and_camp.md` 的联读进入。
+
+## 阶段 6 当前模块导览
+
+- `docs/03_analysis/00_core_thesis.md`：开场模块，先回答整条反应性链在解释什么。
+- `docs/03_analysis/01_macro_structure.md`：导航模块，先把 Act / 区域 / 压力梯与阅读骨架排出来。
+- `docs/03_analysis/04_combat_and_environment.md`：第一组证据模块，先让读者理解“我能这样试”的局部 agency。
+- `docs/03_analysis/02_quests_and_choices.md`：第二组证据模块，把前面的尝试写回状态与后续读回。
+- `docs/03_analysis/03_party_and_camp.md`：第三组证据模块，把分散状态折叠成营地 / 长休反馈。
+- `docs/03_analysis/05_implementation_validation.md`：收尾模块，给整条链分级并保留证据边界。
+
+## 阶段 6 当前发布导览
+
+如果目标不是继续研究，而是把仓库压成一条对外导览，按这个顺序组织最稳：
+
+1. `README.md` 与 `docs/00_project/deconstruction_display_overview.md`
+   先说明项目边界、总逻辑与为什么当前按这条链读。
+2. `docs/03_analysis/00_core_thesis.md` 与 `docs/03_analysis/01_macro_structure.md`
+   先锁命题，再给导航骨架。
+3. `docs/03_analysis/04_combat_and_environment.md` 与 `docs/03_analysis/02_quests_and_choices.md`
+   先证明局部能动性，再解释状态如何被记录与读回。
+4. `docs/03_analysis/03_party_and_camp.md`
+   把前面的状态折成延迟反馈。
+5. `docs/03_analysis/05_implementation_validation.md`
+   最后收口证据等级，不倒置成开场导论。
+
+## 阶段 6 当前发布骨架在哪里
+
+- `docs/00_project/deconstruction_display_overview.md`
+  负责解释为什么要这样排，以及当前 5 段导览稿各自讲什么、依赖哪几份正文、默认交给下一段什么。
+- `docs/01_methodology/presentation_forms.md`
+  负责把这 5 段继续压成可执行的 `section skeleton` 与“首轮发布最低配置”。
+- `.agent/execplan_stage6_release_walkthrough_section_skeleton.md`
+  负责记录本轮为什么做这一步、完成标准是什么、下一步该继续补哪一层发布组织。
+
+如果下一次会话要继续推进阶段 6，不应再重写“先读谁”；应直接在这三处基础上继续补“每一段最低需要哪些摘录 / 图 / 卡片 / 回溯路径”。
+
+## 阶段 6 当前最低发布包在哪里
+
+- `.agent/execplan_stage6_first_release_package_excerpt_asset_queue.md`
+  负责记录第四个子单元为什么存在、完成标准是什么，以及为什么这一步不能回跳阶段 5。
+- `docs/01_methodology/presentation_forms.md`
+  现在是最低发布包的单一真源：每一段需要哪些 excerpt、asset、card 与 traceback，都以这里为准。
+- `docs/03_analysis/05_implementation_validation.md`
+  现在补有 release-facing evidence queue，用来回答“这段可以安全摘录到哪一层、哪些内容不能越级发布”。
+
+如果下一次会话继续推进阶段 6，不应再补新的展示原则；应直接把这里定义好的最低发布包，落成首批实际 excerpt card / asset spec / traceback card，优先入口页与第一段。
+
+## 阶段 6 当前首批实际发布单元在哪里
+
+- `.agent/execplan_stage6_first_actual_release_units_entry_and_first_section.md`
+  负责记录第五个子单元为什么存在、完成标准是什么，以及为什么这一步仍不能回跳阶段 5。
+- `docs/00_project/stage6_entry_first_section_release_units.md`
+  现在是入口页与第一段首批实际发布单元的承载文件：已落成的 `excerpt card`、`asset spec` 与 `traceback card` 都以这里为准。
+- `docs/03_analysis/00_core_thesis.md`
+  负责提供第一段命题侧的 release anchor。
+- `docs/03_analysis/01_macro_structure.md`
+  负责提供第一段导航侧的 release anchor。
+- `docs/03_analysis/05_implementation_validation.md`
+  负责锁定这两组实际单元的证据边界与不可越级摘录范围。
+
+如果下一次会话继续推进阶段 6，不应回头重写入口页与第一段的 queue；应直接切到“第二段：局部行动到状态回流”的首批实际发布单元。
+
+## 阶段 6 当前第二段实际发布单元在哪里
+
+- `.agent/execplan_stage6_second_section_actual_release_units.md`
+  负责记录第六个子单元为什么存在、完成标准是什么，以及为什么这一步不能伪造单一案例因果链。
+- `docs/00_project/stage6_second_section_release_units.md`
+  现在是第二段首批实际发布单元的承载文件：已落成的 `excerpt card`、`asset spec` 与 `traceback card` 都以这里为准。
+- `docs/03_analysis/04_combat_and_environment.md`
+  负责提供第二段左侧“局部 agency”锚点。
+- `docs/03_analysis/02_quests_and_choices.md`
+  负责提供第二段右侧“状态读回”锚点。
+- `docs/03_analysis/05_implementation_validation.md`
+  负责锁定这组双联单元的证据边界与不可越级摘录范围。
+
+如果下一次会话继续推进阶段 6，不应回头重写第二段的 queue；应直接切到“第三段：延迟反馈折叠”的首批实际发布单元。
+
+## 阶段 6 当前第三段实际发布单元在哪里
+
+- `.agent/execplan_stage6_third_section_actual_release_units.md`
+  负责记录第七个子单元为什么存在、完成标准是什么，以及为什么这一步不能把营地写回人物附录或第二条对称营地主干。
+- `docs/00_project/stage6_third_section_release_units.md`
+  现在是第三段首批实际发布单元的承载文件：已落成的 `excerpt card`、`asset spec` 与 `traceback card` 都以这里为准。
+- `docs/03_analysis/03_party_and_camp.md`
+  负责提供第三段的 `camp fold / delayed feedback` 正文锚点。
+- `docs/03_analysis/05_implementation_validation.md`
+  负责锁定这组折返层单元的证据边界与不可越级摘录范围。
+
+如果下一次会话继续推进阶段 6，不应回头重写第三段的 queue；应直接切到“收尾段：证据分级”的首批实际发布单元。
+
+## 阶段 6 当前收尾段实际发布单元在哪里
+
+- `.agent/execplan_stage6_final_section_actual_release_units.md`
+  负责记录第八个子单元为什么存在、完成标准是什么，以及为什么这一步不能把验证层误写成 shipped content 的实现总表。
+- `docs/00_project/stage6_final_section_release_units.md`
+  现在是收尾段首批实际发布单元的承载文件：已落成的 `excerpt card`、`asset spec` 与 `traceback card` 都以这里为准。
+- `docs/03_analysis/05_implementation_validation.md`
+  负责提供收尾段的 `facts / inferences / open questions` 正文锚点，并锁定前四段 actual units 的 evidence lock。
+- `docs/00_project/stage6_entry_first_section_release_units.md`、`docs/00_project/stage6_second_section_release_units.md`、`docs/00_project/stage6_third_section_release_units.md`
+  负责提供收尾段必须反向回链的前四段实际单元。
+
+如果下一次会话继续推进阶段 6，不应回头重写任一段 queue；当前五段首批实际发布单元已经闭合，如需继续推进，应先做首轮发布包总装配 / 审阅清单。
+
+## 阶段 6 当前总装配 / 审阅层在哪里
+
+- `.agent/execplan_stage6_release_package_assembly_review.md`
+  负责记录第九个子单元为什么存在、完成标准是什么，以及为什么这一步不能借审阅之名回跳阶段 5；它现在保留为总装配层的基准说明，而不是续轮唯一入口。
+- `.agent/execplan_stage6_release_package_assembly_review_round31.md`
+  负责记录第三十一轮受控一致性审阅后的最新续轮覆盖说明；当前继续推进阶段 6 时，默认以这份 addendum 承接 review-level 口径。
+- `docs/00_project/stage6_release_package_assembly_review_sheet.md`
+  现在是阶段 6 总装配 / 审阅层的承载文件：五段 actual units 的 `assembly map`、`review checklist` 与 `writeback trigger` 都以这里为准。
+- `docs/03_analysis/05_implementation_validation.md`
+  负责给 assembly / review 层提供 release anchor 与 evidence lock，判断哪些冲突真的值得回写，哪些应保持当前边界。
+
+如果下一次会话继续推进阶段 6，不应再新增第六段 actual units，也不应回头重写 queue；应继续按 `review sheet + 最新 addendum` 执行受控一致性审阅。当前三十一轮审阅里，除首轮的 `FINAL-ASSET-001` 独立 `入口页` 行问题与第十轮补回 `BMK-002 / BMK-003` benchmark traceback 外，未再打开新的 actual-unit 级硬阻塞；2026-04-26 的第三十一轮也已继续确认该修复保持有效，并把续轮入口统一推进到 `round31`。若没有新的 trigger，就只更新审阅结论与状态同步。
+
 ## 分析正文
 
 - `docs/03_analysis/00_core_thesis.md`：总论点与当前最强解释版本。
